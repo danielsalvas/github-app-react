@@ -4,7 +4,6 @@ const useUsers = () => {
 
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
   
   const fetchUser = async (username) => {
       try {
@@ -16,14 +15,13 @@ const useUsers = () => {
             setIsLoading(false) //Remove the spinner after 3 seconds
         }, 2000);
       } catch (error) {
-        setError(error.message)
+        console.log(error.message)
       }
   
   }
   return {
     user,
     isLoading,
-    error,
     fetchUser
   };
 };

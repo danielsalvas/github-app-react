@@ -10,6 +10,14 @@ const CardUser = ({ user, isLoading }) => {
       )
   }
 
+  if (user.message === 'Not Found') {
+    return (
+        <div className="mt-4 lg:w-1/3 w-full flex justify-center items-center bg-red-700 h-14 rounded-lg"> 
+          <p>Please enter a valid username, we couldn't get your data.</p>
+        </div>
+      )
+  }
+
   return (
     <>
         {Object.entries(user).length > 0 ? (

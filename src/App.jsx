@@ -17,7 +17,7 @@ function App() {
         <div className='md:flex md:justify-around mt-5'>
           <SearchUser fetchUser={fetchUser} />
           <CardUser user={user} isLoading={isLoading} />
-        </div>    
+        </div>
       </div>
     </div>
     
