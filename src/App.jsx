@@ -6,7 +6,7 @@ import useUsers from './hooks/useUsers'
 
 function App() {
 
-  const { fetchUser, user } = useUsers();
+  const { fetchUser, user, isLoading } = useUsers();
 
   return (
     <div className="bg-gray-900 min-h-screen h-full text-gray-100 font-inter py-5 px-5">
@@ -16,7 +16,7 @@ function App() {
         </Title>
         <div className='md:flex md:justify-around mt-5'>
           <SearchUser fetchUser={fetchUser} />
-          <CardUser user={user} />
+          <CardUser user={user} isLoading={isLoading} />
         </div>    
       </div>
     </div>

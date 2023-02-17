@@ -1,6 +1,14 @@
+import Spinner from "./Spinner"
 
+const CardUser = ({ user, isLoading }) => {
 
-const CardUser = ({ user }) => {
+  if (isLoading) {
+    return (
+        <div className="mt-4 lg:w-1/3 w-full flex justify-center items-center"> 
+          <Spinner />
+        </div>
+      )
+  }
 
   return (
     <>
