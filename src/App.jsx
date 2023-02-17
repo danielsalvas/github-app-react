@@ -7,7 +7,7 @@ import Title from './components/Title'
 function App() {
 
   return (
-    <div className="bg-gray-900 min-h-screen h-full text-gray-100 font-inter py-10 px-5">
+    <div className="bg-gray-900 min-h-screen h-full text-gray-100 font-inter py-5 px-5">
       <div className="flex flex-col text-center">
         <Title>
           GITHUB APP
