@@ -2,9 +2,11 @@ import { useState } from 'react'
 import CardUser from './components/CardUser'
 import SearchUser from './components/SearchUser'
 import Title from './components/Title'
-
+import useUsers from './hooks/useUsers'
 
 function App() {
+
+  const { fetchUser, user } = useUsers();
 
   return (
     <div className="bg-gray-900 min-h-screen h-full text-gray-100 font-inter py-5 px-5">
@@ -13,8 +15,8 @@ function App() {
           GITHUB APP
         </Title>
         <div className='md:flex md:justify-around mt-5'>
-          <SearchUser />
-          <CardUser />
+          <SearchUser fetchUser={fetchUser} />
+          <CardUser user={user} />
         </div>    
       </div>
     </div>

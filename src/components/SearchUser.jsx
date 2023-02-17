@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react"
-import useUsers from "../hooks/useUsers"
 
-const SearchUser = () => {
+const SearchUser = ({ fetchUser }) => {
 
   const [username, setUsername] = useState('')
-  const { fetchUser } = useUsers();
 
   return (
     <div className="mt-6 lg:w-1/3 w-full md:ml-4">
